@@ -70,4 +70,5 @@ char * intToRoman(int num){
 ```
 ####注意：<br>
 1、char型数组ans需要设为静态局部变量：static char ans[16]={'\0'};<br>
-2、或者还可以用malloc分配内存空间：char * ans=(char * )malloc(16); 
+2、或者还可以用malloc分配内存空间：char * ans=(char * )malloc(16); <br>
+3、思路较简单，步骤较麻烦。
