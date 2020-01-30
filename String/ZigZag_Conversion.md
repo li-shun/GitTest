@@ -7,16 +7,16 @@
 char * convert(char * s, int numRows){
     int len=strlen(s),j=0,t=2*numRows-2;
     static char ans[1000]={'\0'};
-    for(int i=0;i<1000;i++)
+    for(int i=0;i<1000;i++)   
         ans[i]='\0';
-    if(len==0||numRows==0)
+    if(len==0||numRows==0)        //考虑特殊情况
         return ans;
     if(len==1||numRows==1||len<=numRows)
     {    strcpy(ans,s);
         return ans;}
-    for(int i=0;i<len;i=i+t)
+    for(int i=0;i<len;i=i+t)            //输入第一行
         ans[j++]=s[i];
-    for(int r=2;r<=numRows-1;r++)
+    for(int r=2;r<=numRows-1;r++)             //输入中间numRows-2行
     {
         ans[j++]=s[r-1];
         for(int i=r-1+t-2*(r-1);i<len;)
@@ -30,7 +30,7 @@ char * convert(char * s, int numRows){
             i=i+t-2*(r-1);
         }
     }
-    for(int i=numRows-1;i<len;i=i+t)
+    for(int i=numRows-1;i<len;i=i+t)        //输入最后一行
         ans[j++]=s[i];
     return ans;
 }
