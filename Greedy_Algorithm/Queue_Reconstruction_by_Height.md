@@ -3,7 +3,7 @@
 总人数少于1100。
 ### 思路：
 先把人们按身高从小到大排列，从大个开始排列位置，并且每个人对应的K+1就是他在前面已经先排了的人中要插入的位置号，插入前先把K后面的人位置号都+1。
-###
+### 解决：
 ```
 int** reconstructQueue(int** people, int peopleSize, int* peopleColSize, int* returnSize, int** returnColumnSizes){
     int **ans=(int **)malloc(sizeof(int *)*peopleSize);
